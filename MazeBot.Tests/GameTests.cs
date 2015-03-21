@@ -1,4 +1,5 @@
 ﻿using System;
+using MazeBot.Exceptions;
 using MazeBot.Utils;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -36,5 +37,28 @@ namespace MazeBot.Tests
 			Assert.AreEqual(8, game.Maze.Dimensions.X);
 			Assert.AreEqual(6, game.Maze.Dimensions.Y);
 		}
+
+		[TestMethod]
+		public void TestErrorInitialization()
+		{
+			Game game = new Game();
+			try
+			{
+				game.Initialize(MockData.ErrorEndPointsXml);
+				Assert.Fail("Xml should fail");
+			}
+			catch(XmlException ex)
+			{
+			}
+			try
+			{
+				game.Initialize(MockData.ErrorWallsXml);
+				Assert.Fail("Xml should fail");
+			}
+			catch(XmlException ex)
+			{
+			}
+		}
+
 	}
 }

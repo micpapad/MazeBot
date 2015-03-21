@@ -31,5 +31,21 @@ namespace MazeBot.Tests
 				return Resources.sCheckInitXml;
 			}
 		}
+
+		public static string ErrorEndPointsXml
+		{
+			get
+			{
+				return Resources.sErrorEndPointsXml;
+			}
+		}
+
+		public static string ErrorWallsXml
+		{
+			get
+			{
+				return Resources.sErrorWallsXml;
+			}
+		}
 	}
 }

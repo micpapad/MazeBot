@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using MazeBot.Exceptions;
 using MazeBot.Utils;
 
 namespace MazeBot
@@ -33,6 +34,9 @@ namespace MazeBot
 								Children = endpoint.Descendants()
 							};
 
+			if (endpoints.Count() == 0)
+				throw new XmlException(Resources.sErrXmlNoEndpointsFound);
+
 			foreach(var endpoint in endpoints)
 			{
 				foreach(var child in endpoint.Children)
@@ -58,6 +62,8 @@ namespace MazeBot
 			var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
 							select walltile;
 
+			if (walltiles.Count() == 0)
+				throw new XmlException(Resources.sErrXmlNoEndpointsFound);
 			List<Point> wallTilePoints = new List<Point>();
 			foreach(var walltile in walltiles)
 			{

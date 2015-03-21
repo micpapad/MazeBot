@@ -61,29 +61,28 @@ namespace MazeBot.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;xml&gt;
-        ///	&lt;MazeBot&gt;
-        ///		&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
-        ///			&lt;Walls&gt;
-        ///				&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
-        ///				&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/Walls&gt;
-        ///		&lt;/MazeDefinition&gt;
-        ///		&lt;Bot&gt;
-        ///			&lt;Endpoints&gt;
-        ///				&lt;Start X=&quot;1&quot; Y=&quot;2&quot;/&gt;
-        ///				&lt;Goal X=&quot;5&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/EndPoints&gt;
-        ///		&lt;/Bot&gt;
-        ///	&lt;MazeBot&gt;
-        ///&lt;/xml&gt;.
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;Goal X=&quot;5&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
         /// </summary>
         internal static string sCheckInitXml {
             get {
@@ -92,30 +91,29 @@ namespace MazeBot.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;xml&gt;
-        ///	&lt;MazeBot&gt;
-        ///		&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
-        ///			&lt;Walls&gt;
-        ///				&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
-        ///				&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;5&quot; Y=&quot;6&quot;/&gt;
-        ///				&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/Walls&gt;
-        ///		&lt;/MazeDefinition&gt;
-        ///		&lt;Bot&gt;
-        ///			&lt;Endpoints&gt;
-        ///				&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
-        ///				&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/EndPoints&gt;
-        ///		&lt;/Bot&gt;
-        ///	&lt;MazeBot&gt;
-        ///&lt;/xml&gt;.
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;6&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBo [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string sNoSolutionXml {
             get {
@@ -124,29 +122,28 @@ namespace MazeBot.Tests {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;xml&gt;
-        ///	&lt;MazeBot&gt;
-        ///		&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
-        ///			&lt;Walls&gt;
-        ///				&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
-        ///				&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
-        ///				&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
-        ///				&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/Walls&gt;
-        ///		&lt;/MazeDefinition&gt;
-        ///		&lt;Bot&gt;
-        ///			&lt;Endpoints&gt;
-        ///				&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
-        ///				&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
-        ///			&lt;/EndPoints&gt;
-        ///		&lt;/Bot&gt;
-        ///	&lt;MazeBot&gt;
-        ///&lt;/xml&gt;.
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
         /// </summary>
         internal static string sSampleXml {
             get {

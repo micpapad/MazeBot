@@ -17,8 +17,8 @@ namespace MazeBot.Tests
 			Assert.AreEqual(game.GoalPosition.Y, game.Bot.Position.Y);
 
 			Assert.AreEqual(GameResult.GoalFound, game.Result);
-			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPosition.X);
-			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPosition.Y);
+			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPositionFound.X);
+			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPositionFound.Y);
 		}
 
 		[TestMethod]
@@ -29,8 +29,8 @@ namespace MazeBot.Tests
 			game.Play();
 
 			Assert.AreEqual(GameResult.GoalFound, game.Result);
-			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPosition.X);
-			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPosition.Y);
+			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPositionFound.X);
+			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPositionFound.Y);
 		}
 
 		[TestMethod]

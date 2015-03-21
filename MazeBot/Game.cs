@@ -12,6 +12,7 @@ namespace MazeBot
 	{
 		public GameResult Result { get; set; }
 		public Bot Bot { get; set; }
+		public Maze Maze { get; set; }
 		public Point StartPosition { get; set; }
 		public Point GoalPosition { get; set; }
 
@@ -49,9 +50,24 @@ namespace MazeBot
 				}
 			}
 
+			// Initialize Maze
+			XElement mazeDefinition = xdoc.Descendants("MazeDefinition").First();
+			int dimX = Convert.ToInt32(mazeDefinition.Attribute("X").Value);
+			int dimY = Convert.ToInt32(mazeDefinition.Attribute("Y").Value);
+
+			var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
+							select walltile;
+
+			List<Point> wallTilePoints = new List<Point>();
+			foreach(var walltile in walltiles)
+			{
+				wallTilePoints.Add(new Point(Convert.ToInt32(walltile.Attribute("X").Value),
+											 Convert.ToInt32(walltile.Attribute("Y").Value)));
+			}
+			Maze = new Maze();
+			Maze.Initialize(dimX, dimY, wallTilePoints);
+			
 			Bot = new Bot();
-
-
 		}
 
 		public void Play()

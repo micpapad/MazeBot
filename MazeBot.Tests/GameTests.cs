@@ -16,6 +16,25 @@ namespace MazeBot.Tests
 			Assert.AreEqual(2, game.StartPosition.Y);
 			Assert.AreEqual(5, game.GoalPosition.X);
 			Assert.AreEqual(6, game.GoalPosition.Y);
+
+			Assert.IsTrue(game.Maze.IsWallTile(1, 3));
+			Assert.IsTrue(game.Maze.IsWallTile(2, 3));
+			Assert.IsTrue(game.Maze.IsWallTile(3, 3));
+			Assert.IsTrue(game.Maze.IsWallTile(4, 3));
+			Assert.IsTrue(game.Maze.IsWallTile(4, 2));
+			Assert.IsTrue(game.Maze.IsWallTile(5, 5));
+			Assert.IsTrue(game.Maze.IsWallTile(6, 5));
+			Assert.IsTrue(game.Maze.IsWallTile(7, 5));
+			Assert.IsTrue(game.Maze.IsWallTile(7, 6));
+
+			Assert.IsFalse(game.Maze.IsWallTile(1, 1));
+			Assert.IsFalse(game.Maze.IsWallTile(1, 2));
+			Assert.IsFalse(game.Maze.IsWallTile(2, 2));
+			Assert.IsFalse(game.Maze.IsWallTile(8, 6));
+			Assert.IsFalse(game.Maze.IsWallTile(3, 4));
+
+			Assert.AreEqual(8, game.Maze.Dimensions.X);
+			Assert.AreEqual(6, game.Maze.Dimensions.Y);
 		}
 	}
 }

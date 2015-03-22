@@ -26,12 +26,14 @@ namespace MazeBot
 
 		public void Initialize(int dimX, int dimY, List<Point> walls)
 		{
-			Canvas = new bool[dimX + 1, dimY + 1];
+			Canvas = new bool[dimX + 2, dimY + 2];
 
-			for (int x = 0; x < dimX + 1; ++x)
+			for (int x = 0; x < dimX + 2; ++x)
 			{
-				for (int y = 0; y < dimY + 1; ++y)
+				for (int y = 0; y < dimY + 2; ++y)
 				{
+					if (x == 0 || y == 0 || x == dimX + 1 || y == dimY + 1) // canvas is surrounded by walls
+						Canvas[x, y] = false;
 					Canvas[x, y] = true;
 				}
 			}

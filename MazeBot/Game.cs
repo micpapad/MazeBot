@@ -72,7 +72,7 @@ namespace MazeBot
 			Maze.Initialize(dimX, dimY, wallTilePoints);
 			
 			Bot = new Bot(this);
-			Bot.Initialize(dimX, dimY);
+			Bot.Initialize(Maze.Dimensions.X, Maze.Dimensions.Y);
 		}
 
 		public void Play()

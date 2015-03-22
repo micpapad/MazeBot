@@ -49,6 +49,9 @@ namespace MazeBot.Tests
 			}
 			catch(XmlException ex)
 			{
+				PrivateType pt = new PrivateType("MazeBot", "MazeBot.Resources");
+				string msgExpected = pt.GetStaticProperty("sErrXmlNoEndpointsFound").ToString();
+				Assert.AreEqual(msgExpected, ex.Message);
 			}
 			try
 			{
@@ -57,6 +60,9 @@ namespace MazeBot.Tests
 			}
 			catch(XmlException ex)
 			{
+				PrivateType pt = new PrivateType("MazeBot", "MazeBot.Resources");
+				string msgExpected = pt.GetStaticProperty("sErrXmlNoWallsDefined").ToString();
+				Assert.AreEqual(msgExpected, ex.Message);
 			}
 		}
 

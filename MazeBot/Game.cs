@@ -73,13 +73,12 @@ namespace MazeBot
 			
 			Bot = new Bot(this);
 			Bot.Initialize(Maze.Dimensions.X, Maze.Dimensions.Y);
+			Bot.SetPosition(StartPosition.X, StartPosition.Y);
 		}
 
 		public void Play()
 		{
 			Result = GameResult.GameInProgress;
-
-			Bot.SetPosition(StartPosition.X, StartPosition.Y);
 		}
 
 

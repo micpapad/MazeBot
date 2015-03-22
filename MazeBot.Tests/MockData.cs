@@ -20,7 +20,7 @@ namespace MazeBot.Tests
 		{
 			get
 			{
-				return Resources.sSampleXml;
+				return Resources.sNoSolutionXml;
 			}
 		}
 

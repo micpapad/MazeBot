@@ -16,5 +16,10 @@ namespace MazeBot.Utils
 			X = x;
 			Y = y;
 		}
+
+		public static implicit operator System.Drawing.Point(Point pt)
+		{
+			return new System.Drawing.Point(pt.X, pt.Y);
+		}
 	}
 }

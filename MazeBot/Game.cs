@@ -9,7 +9,7 @@ using MazeBot.Utils;
 
 namespace MazeBot
 {
-	public class Game
+	public class Game : IGameRulesHolder
 	{
 		public GameResult Result { get; set; }
 		public Bot Bot { get; set; }
@@ -43,13 +43,11 @@ namespace MazeBot
 				{
 					if (String.Compare(child.Name.ToString(), "Start", true) == 0)
 					{
-						StartPosition.X = Convert.ToInt32(child.Attribute("X").Value);
-						StartPosition.Y = Convert.ToInt32(child.Attribute("Y").Value);
+						StartPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
 					}
 					else if (String.Compare(child.Name.ToString(), "Goal", true) == 0)
 					{
-						GoalPosition.X = Convert.ToInt32(child.Attribute("X").Value);
-						GoalPosition.Y = Convert.ToInt32(child.Attribute("Y").Value);
+						GoalPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
 					}
 				}
 			}
@@ -63,7 +61,7 @@ namespace MazeBot
 							select walltile;
 
 			if (walltiles.Count() == 0)
-				throw new XmlException(Resources.sErrXmlNoEndpointsFound);
+				throw new XmlException(Resources.sErrXmlNoWallsDefined);
 			List<Point> wallTilePoints = new List<Point>();
 			foreach(var walltile in walltiles)
 			{
@@ -73,16 +71,49 @@ namespace MazeBot
 			Maze = new Maze();
 			Maze.Initialize(dimX, dimY, wallTilePoints);
 			
-			Bot = new Bot();
+			Bot = new Bot(this);
+			Bot.Initialize(dimX, dimY);
 		}
 
 		public void Play()
 		{
 			Result = GameResult.GameInProgress;
 
-			Bot.Position.X = StartPosition.X;
-			Bot.Position.Y = StartPosition.Y;
+			Bot.SetPosition(StartPosition.X, StartPosition.Y);
 		}
 
+
+		#region IGameRulesHolder Members
+
+		public List<TileStatusInfo> GetTileStatusInfo(Point currentPosition)
+		{
+			List<TileStatusInfo> tileStatuses = new List<TileStatusInfo>();
+
+			for (int x = currentPosition.X - 1; x <= currentPosition.X + 1; ++x)
+			{
+				if (x <= 0 || x > Maze.Dimensions.X)
+					continue;
+				for (int y = currentPosition.Y - 1; y <= currentPosition.Y + 1; ++y)
+				{
+					if (y <= 0 || y > Maze.Dimensions.Y)
+						continue;
+
+					if (x == GoalPosition.X && y == GoalPosition.Y)
+					{
+						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Goal, X = x, Y = y });
+					}
+					else if (Maze.IsWallTile(x, y))
+					{
+						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Wall, X = x, Y = y });
+					}
+					else
+						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Free, X = x, Y = y });
+
+				}
+			}
+			return tileStatuses;
+		}
+
+		#endregion
 	}
 }

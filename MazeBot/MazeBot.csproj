@@ -44,6 +44,7 @@
     <Compile Include="Bot.cs" />
     <Compile Include="Exceptions\XmlException.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IGameRulesHolder.cs" />
     <Compile Include="Maze.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>

@@ -16,7 +16,7 @@ namespace MazeBot
 		{
 			get
 			{
-				return new Point(Canvas.GetUpperBound(0) + 1, Canvas.GetUpperBound(1) + 1);
+				return new Point(Canvas.GetUpperBound(0), Canvas.GetUpperBound(1));
 			}
 		}
 
@@ -26,11 +26,11 @@ namespace MazeBot
 
 		public void Initialize(int dimX, int dimY, List<Point> walls)
 		{
-			Canvas = new bool[dimX, dimY];
+			Canvas = new bool[dimX + 1, dimY + 1];
 
-			for (int x = 0; x < dimX; ++x)
+			for (int x = 0; x < dimX + 1; ++x)
 			{
-				for (int y = 0; y < dimY; ++y)
+				for (int y = 0; y < dimY + 1; ++y)
 				{
 					Canvas[x, y] = true;
 				}
@@ -38,13 +38,13 @@ namespace MazeBot
 
 			foreach (Point wall in walls)
 			{
-				Canvas[wall.X - 1, wall.Y - 1] = false;
+				Canvas[wall.X, wall.Y] = false;
 			}
 		}
 
 		public bool IsWallTile(int x, int y)
 		{
-			return !Canvas[x - 1, y - 1];
+			return !Canvas[x, y];
 		}
 	}
 }

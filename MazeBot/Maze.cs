@@ -34,7 +34,8 @@ namespace MazeBot
 				{
 					if (x == 0 || y == 0 || x == dimX + 1 || y == dimY + 1) // canvas is surrounded by walls
 						Canvas[x, y] = false;
-					Canvas[x, y] = true;
+					else
+						Canvas[x, y] = true;
 				}
 			}
 

@@ -80,6 +80,19 @@ namespace MazeBot
 		public void Play()
 		{
 			Result = GameResult.GameInProgress;
+			TileStatus status = Bot.Search();
+			switch(status)
+			{
+				case TileStatus.Goal:
+					Result = GameResult.GoalFound;
+					break;
+				case TileStatus.Undefined:
+					Result = GameResult.GoalNotFound;
+					break;
+				default:
+					Debug.Assert(false);
+					throw new GameException(Resources.sErrGameInvalidResult);
+			}
 		}
 
 

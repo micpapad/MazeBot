@@ -88,6 +88,15 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game error: Invalid Result.
+        /// </summary>
+        internal static string sErrGameInvalidResult {
+            get {
+                return ResourceManager.GetString("sErrGameInvalidResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xml Error: Error in Xml initialization.
         /// </summary>
         internal static string sErrXmlGeneric {

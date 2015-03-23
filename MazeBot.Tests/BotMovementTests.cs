@@ -46,9 +46,9 @@ namespace MazeBot.Tests
 		{
 			Game game = new Game();
 			game.Initialize(MockData.NoSolutionXml);
-			bool result = game.Bot.MoveTo(game.GoalPosition.X, game.GoalPosition.Y);
+			TileStatus result = game.Bot.MoveTo(game.GoalPosition.X, game.GoalPosition.Y);
 
-			Assert.AreEqual(false, result);
+			Assert.AreEqual(TileStatus.Undefined, result);
 		}
 
 

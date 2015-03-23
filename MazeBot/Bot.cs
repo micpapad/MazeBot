@@ -63,7 +63,7 @@ namespace MazeBot
 			}
 		}
 
-		public bool MoveTo(int x, int y)
+		public TileStatus MoveTo(int x, int y)
 		{
 			while (Position.X != x || Position.Y != y)
 			{
@@ -72,10 +72,19 @@ namespace MazeBot
 				pf.Diagonals = false;
 				List<PathFinderNode> nodes = pf.FindPath(Position, new Point(x, y));
 				if (nodes == null)
-					return false;
+				{
+					if (TileStatus[x, y] == MazeBot.TileStatus.Wall)
+						return MazeBot.TileStatus.Wall;
+					return MazeBot.TileStatus.Undefined; // no solution;
+				}
 				SetPosition(nodes[1].X, nodes[1].Y);
+				if (TileStatus[Position.X, Position.Y] == MazeBot.TileStatus.Goal)
+				{
+					GoalPositionFound = new Point(Position.X, Position.Y);
+					return MazeBot.TileStatus.Goal;
+				}
 			}
-			return true;
+			return TileStatus[Position.X, Position.Y];
 		}
 
 		private byte[,] BuildPathFinderGrid()
@@ -95,5 +104,26 @@ namespace MazeBot
 			}
 			return grid;
 		}
+
+		public TileStatus Search()
+		{
+			TileStatus status = MazeBot.TileStatus.Undefined;
+			for (int x = 1; x < TileStatus.GetUpperBound(0); ++x)
+			{
+				for (int y = 1; y < TileStatus.GetUpperBound(1); ++y)
+				{
+					if (TileStatus[x, y] == MazeBot.TileStatus.Goal) // if goal is found, move there
+						status = MoveTo(x, y);
+					else if (TileStatus[x, y] == MazeBot.TileStatus.Undefined) // else move to first unmapped tile.
+						status = MoveTo(x, y);
+					else
+						status = TileStatus[x, y];
+					if (status == MazeBot.TileStatus.Goal || status == MazeBot.TileStatus.Undefined)
+						return status;
+				}
+			}
+			return status;
+		}
+
 	}
 }

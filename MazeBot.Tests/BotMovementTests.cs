@@ -62,7 +62,7 @@ namespace MazeBot.Tests
 			TileStatus[,] tileStatus = (TileStatus[,])po.GetFieldOrProperty("TileStatus");
 			Assert.AreEqual(TileStatus.Free, tileStatus[1, 1]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[1, 2]);
-			Assert.AreEqual(TileStatus.Free, tileStatus[2, 2]);
+			Assert.AreEqual(TileStatus.Undefined, tileStatus[2, 2]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[2, 1]);
 			Assert.AreEqual(TileStatus.Undefined, tileStatus[3, 1]);
 			Assert.AreEqual(TileStatus.Undefined, tileStatus[1, 3]);
@@ -74,18 +74,19 @@ namespace MazeBot.Tests
 			Assert.AreEqual(TileStatus.Free, tileStatus[2, 2]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[2, 1]);
 			Assert.AreEqual(TileStatus.Wall, tileStatus[1, 3]);
-			Assert.AreEqual(TileStatus.Wall, tileStatus[2, 3]);
+			Assert.AreEqual(TileStatus.Undefined, tileStatus[2, 3]);
 			Assert.AreEqual(TileStatus.Undefined, tileStatus[3, 3]);
 
 			game.Bot.SetPosition(5, 6);
 			Assert.AreEqual(TileStatus.Goal, tileStatus[6, 6]);
+			Assert.AreEqual(TileStatus.Wall, tileStatus[5, 5]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[1, 1]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[1, 1]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[1, 2]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[2, 2]);
 			Assert.AreEqual(TileStatus.Free, tileStatus[2, 1]);
 			Assert.AreEqual(TileStatus.Wall, tileStatus[1, 3]);
-			Assert.AreEqual(TileStatus.Wall, tileStatus[2, 3]);
+			Assert.AreEqual(TileStatus.Undefined, tileStatus[2, 3]);
 			Assert.AreEqual(TileStatus.Undefined, tileStatus[3, 3]);
 		}
 	}

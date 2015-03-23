@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -84,34 +85,45 @@ namespace MazeBot
 
 		#region IGameRulesHolder Members
 
+		private TileStatus GetTileStatus(int x, int y)
+		{
+			TileStatus ret = TileStatus.Undefined;
+
+			if (x == GoalPosition.X && y == GoalPosition.Y)
+			{
+				ret = TileStatus.Goal;
+			}
+			else if (Maze.IsWallTile(x, y))
+			{
+				ret = TileStatus.Wall;
+			}
+			else
+				ret = TileStatus.Free;
+
+			Debug.Assert(ret != TileStatus.Undefined); // Should have a value;
+
+			return ret;
+		}
+
+		private TileStatusInfo CheckTileStatus(int x, int y)
+		{
+			TileStatus ts = GetTileStatus(x, y);
+			return new TileStatusInfo() { Status = ts, X = x, Y = y };
+		}
+
 		public List<TileStatusInfo> GetTileStatusInfo(Point currentPosition)
 		{
 			List<TileStatusInfo> tileStatuses = new List<TileStatusInfo>();
 
-			for (int x = currentPosition.X - 1; x <= currentPosition.X + 1; ++x)
-			{
-				if (x <= 0 || x > Maze.Dimensions.X)
-					continue;
-				for (int y = currentPosition.Y - 1; y <= currentPosition.Y + 1; ++y)
-				{
-					if (y <= 0 || y > Maze.Dimensions.Y)
-						continue;
-
-					if (x == GoalPosition.X && y == GoalPosition.Y)
-					{
-						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Goal, X = x, Y = y });
-					}
-					else if (Maze.IsWallTile(x, y))
-					{
-						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Wall, X = x, Y = y });
-					}
-					else
-						tileStatuses.Add(new TileStatusInfo() { Status = TileStatus.Free, X = x, Y = y });
-
-				}
-			}
+			tileStatuses.Add(CheckTileStatus(currentPosition.X, currentPosition.Y));
+			tileStatuses.Add(CheckTileStatus(currentPosition.X - 1, currentPosition.Y));
+			tileStatuses.Add(CheckTileStatus(currentPosition.X + 1, currentPosition.Y));
+			tileStatuses.Add(CheckTileStatus(currentPosition.X, currentPosition.Y - 1));
+			tileStatuses.Add(CheckTileStatus(currentPosition.X, currentPosition.Y + 1));
+			
 			return tileStatuses;
 		}
+
 
 		#endregion
 	}

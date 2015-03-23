@@ -61,6 +61,33 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bot movement error: Bot cannot move to undefined tile. This should never happen..
+        /// </summary>
+        internal static string sErrBotAdjacentCellShouldNotBeUndefined {
+            get {
+                return ResourceManager.GetString("sErrBotAdjacentCellShouldNotBeUndefined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bot movement error: Bot cannot move to wall tile..
+        /// </summary>
+        internal static string sErrBotCannotMoveToWallTile {
+            get {
+                return ResourceManager.GetString("sErrBotCannotMoveToWallTile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bot movement error: Bot cannot move to non-adjacent tiles..
+        /// </summary>
+        internal static string sErrBotMoveCannotMoveNonAdjacentTiles {
+            get {
+                return ResourceManager.GetString("sErrBotMoveCannotMoveNonAdjacentTiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xml Error: Error in Xml initialization.
         /// </summary>
         internal static string sErrXmlGeneric {

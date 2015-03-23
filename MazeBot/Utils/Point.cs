@@ -21,5 +21,10 @@ namespace MazeBot.Utils
 		{
 			return new System.Drawing.Point(pt.X, pt.Y);
 		}
+
+		public static double Distance(Point from, Point to)
+		{
+			return Math.Sqrt(Math.Pow(from.X - to.X, 2) + Math.Pow(from.Y - to.Y, 2));
+		}
 	}
 }

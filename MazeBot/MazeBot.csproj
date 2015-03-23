@@ -48,6 +48,7 @@
     <Compile Include="Algorithms\PathFinder.cs" />
     <Compile Include="Algorithms\PriorityQueueB.cs" />
     <Compile Include="Bot.cs" />
+    <Compile Include="Exceptions\InvalidMovementException.cs" />
     <Compile Include="Exceptions\XmlException.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="IGameRulesHolder.cs" />

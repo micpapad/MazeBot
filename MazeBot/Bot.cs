@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Algorithms;
+using MazeBot.Exceptions;
 using MazeBot.Utils;
 
 namespace MazeBot
@@ -32,7 +33,27 @@ namespace MazeBot
 
 		public void SetPosition(int x, int y)
 		{
-			Position = new Point(x, y);
+			bool definingStartingPoint = Position.X == -1 && Position.Y == -1;
+			Point newPosition = new Point(x, y);
+			if (!definingStartingPoint)
+			{
+				if (Point.Distance(newPosition, Position) > 1)
+					throw new InvalidMovementException(Resources.sErrBotMoveCannotMoveNonAdjacentTiles);
+
+				// this should never happen. Since we are moving to adjacent tile, it should never be undefined.
+				// Throw an invalid status error
+				if (TileStatus[x, y] == MazeBot.TileStatus.Undefined)
+				{
+					throw new InvalidMovementException(Resources.sErrBotAdjacentCellShouldNotBeUndefined);
+				}
+			}
+			if (TileStatus[x, y] == MazeBot.TileStatus.Wall)
+			{
+				throw new InvalidMovementException(Resources.sErrBotCannotMoveToWallTile);
+			}
+
+			Position = newPosition;
+
 			Path.Add(Position);
 
 			List<TileStatusInfo> tsiList = GameRulesHolder.GetTileStatusInfo(Position);

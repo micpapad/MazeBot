@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="sErrBotAdjacentCellShouldNotBeUndefined" xml:space="preserve">
+    <value>Bot movement error: Bot cannot move to undefined tile. This should never happen.</value>
+  </data>
+  <data name="sErrBotCannotMoveToWallTile" xml:space="preserve">
+    <value>Bot movement error: Bot cannot move to wall tile.</value>
+  </data>
+  <data name="sErrBotMoveCannotMoveNonAdjacentTiles" xml:space="preserve">
+    <value>Bot movement error: Bot cannot move to non-adjacent tiles.</value>
+  </data>
   <data name="sErrXmlGeneric" xml:space="preserve">
     <value>Xml Error: Error in Xml initialization</value>
   </data>

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using MazeBot.Exceptions;
+using MazeBot.UI;
 using MazeBot.Utils;
 
 namespace MazeBot
@@ -79,6 +80,7 @@ namespace MazeBot
 
 		public void Play()
 		{
+			ConsoleOutput output = new ConsoleOutput();
 			Result = GameResult.GameInProgress;
 			TileStatus status = Bot.Search();
 			switch(status)
@@ -93,7 +95,16 @@ namespace MazeBot
 					Debug.Assert(false);
 					throw new GameException(Resources.sErrGameInvalidResult);
 			}
+
+			OutputGameResults(output);
 		}
+
+		private void OutputGameResults(IOutput output)
+		{
+			output.OutputResult(Result);
+			Bot.OutputPath(output);
+		}
+
 
 
 		#region IGameRulesHolder Members

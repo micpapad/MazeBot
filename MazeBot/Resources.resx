@@ -138,4 +138,22 @@
   <data name="sErrXmlNoWallsDefined" xml:space="preserve">
     <value>Xml Error: No walls defined in Xml.</value>
   </data>
+  <data name="sGameInProgress" xml:space="preserve">
+    <value>Game in progress</value>
+  </data>
+  <data name="sGameNotStarted" xml:space="preserve">
+    <value>Game not started</value>
+  </data>
+  <data name="sGameResult" xml:space="preserve">
+    <value>Game Result: {0}</value>
+  </data>
+  <data name="sGoalFound" xml:space="preserve">
+    <value>Found goal</value>
+  </data>
+  <data name="sGoalNotFound" xml:space="preserve">
+    <value>Could not find goal</value>
+  </data>
+  <data name="sPoint" xml:space="preserve">
+    <value>Point: ({0},{1})</value>
+  </data>
 </root>

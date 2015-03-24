@@ -122,5 +122,59 @@ namespace MazeBot {
                 return ResourceManager.GetString("sErrXmlNoWallsDefined", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game in progress.
+        /// </summary>
+        internal static string sGameInProgress {
+            get {
+                return ResourceManager.GetString("sGameInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game not started.
+        /// </summary>
+        internal static string sGameNotStarted {
+            get {
+                return ResourceManager.GetString("sGameNotStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game Result: {0}.
+        /// </summary>
+        internal static string sGameResult {
+            get {
+                return ResourceManager.GetString("sGameResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Found goal.
+        /// </summary>
+        internal static string sGoalFound {
+            get {
+                return ResourceManager.GetString("sGoalFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not find goal.
+        /// </summary>
+        internal static string sGoalNotFound {
+            get {
+                return ResourceManager.GetString("sGoalNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Point: ({0},{1}).
+        /// </summary>
+        internal static string sPoint {
+            get {
+                return ResourceManager.GetString("sPoint", resourceCulture);
+            }
+        }
     }
 }

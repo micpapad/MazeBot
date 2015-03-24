@@ -59,6 +59,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="UI\ConsoleOutput.cs" />
+    <Compile Include="UI\IOutput.cs" />
     <Compile Include="Utils\GameResult.cs" />
     <Compile Include="Utils\Point.cs" />
     <Compile Include="Program.cs" />
@@ -73,6 +75,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

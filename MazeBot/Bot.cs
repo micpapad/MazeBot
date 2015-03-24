@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Algorithms;
 using MazeBot.Exceptions;
+using MazeBot.UI;
 using MazeBot.Utils;
 
 namespace MazeBot
@@ -123,6 +124,14 @@ namespace MazeBot
 				}
 			}
 			return status;
+		}
+
+		public void OutputPath(IOutput output)
+		{
+			foreach (Point pt in Path)
+			{
+				output.OutputStep(pt);
+			}
 		}
 
 	}

@@ -72,7 +72,13 @@ namespace MazeBot
 			}
 			Maze = new Maze();
 			Maze.Initialize(dimX, dimY, wallTilePoints);
-			
+
+			if (Maze.IsWallTile(StartPosition.X, StartPosition.Y))
+				throw new XmlException(Resources.sErrXmlStartingPointShouldNotBeAtWall);
+
+			if (Maze.IsWallTile(GoalPosition.X, GoalPosition.Y))
+				throw new XmlException(Resources.sErrXmlGoalPointShouldNotBeAtWall);
+
 			Bot = new Bot(this);
 			Bot.Initialize(Maze.Dimensions.X, Maze.Dimensions.Y);
 			Bot.SetPosition(StartPosition.X, StartPosition.Y);

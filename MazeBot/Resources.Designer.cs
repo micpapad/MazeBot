@@ -124,6 +124,15 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Xml Error: Goal point should not be at wall..
+        /// </summary>
+        internal static string sErrXmlGoalPointShouldNotBeAtWall {
+            get {
+                return ResourceManager.GetString("sErrXmlGoalPointShouldNotBeAtWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xml Error: No endpoints defined in Xml..
         /// </summary>
         internal static string sErrXmlNoEndpointsFound {
@@ -138,6 +147,15 @@ namespace MazeBot {
         internal static string sErrXmlNoWallsDefined {
             get {
                 return ResourceManager.GetString("sErrXmlNoWallsDefined", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xml Error: Starting point should not be at wall..
+        /// </summary>
+        internal static string sErrXmlStartingPointShouldNotBeAtWall {
+            get {
+                return ResourceManager.GetString("sErrXmlStartingPointShouldNotBeAtWall", resourceCulture);
             }
         }
         

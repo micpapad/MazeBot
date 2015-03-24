@@ -138,11 +138,17 @@
   <data name="sErrXmlGeneric" xml:space="preserve">
     <value>Σφάλμα στο Xml: Σφάλμα αρχικοποίησης του Xml.</value>
   </data>
+  <data name="sErrXmlGoalPointShouldNotBeAtWall" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Το τελικό σημείο δεν πρέπει να είναι σημείο τοίχου.</value>
+  </data>
   <data name="sErrXmlNoEndpointsFound" xml:space="preserve">
     <value>Σφάλμα στο Xml: Δεν ορίστηκαν σημεία αρχής και τέλους στο Xml.</value>
   </data>
   <data name="sErrXmlNoWallsDefined" xml:space="preserve">
     <value>Σφάλμα στο Xml: Δεν ορίστηκαν τείχη στο Xml.</value>
+  </data>
+  <data name="sErrXmlStartingPointShouldNotBeAtWall" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Το αρχικό σημείο δεν πρέπει να είναι σημείο τοίχου.</value>
   </data>
   <data name="sGameInProgress" xml:space="preserve">
     <value>Το παιχνίδι είναι σε εξέλιξη</value>

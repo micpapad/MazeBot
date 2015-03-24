@@ -47,5 +47,21 @@ namespace MazeBot.Tests
 				return Resources.sErrorWallsXml;
 			}
 		}
+
+		public static string Invalid_StartPointAtWall
+		{
+			get
+			{
+				return Resources.sInvalidXml_StartPointAtWall;
+			}
+		}
+
+		public static string Invalid_GoalPointAtWall
+		{
+			get
+			{
+				return Resources.sInvalidXml_GoalPointAtWall;
+			}
+		}
 	}
 }

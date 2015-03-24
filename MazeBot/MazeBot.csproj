@@ -54,6 +54,7 @@
     <Compile Include="Game.cs" />
     <Compile Include="IGameRulesHolder.cs" />
     <Compile Include="Maze.cs" />
+    <Compile Include="Mono.Options\Options.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources.resx">

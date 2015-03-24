@@ -97,6 +97,15 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Missing required option -i=XMLFile.
+        /// </summary>
+        internal static string sErrMissingOptionXmlFile {
+            get {
+                return ResourceManager.GetString("sErrMissingOptionXmlFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xml Error: Error in Xml initialization.
         /// </summary>
         internal static string sErrXmlGeneric {

@@ -129,6 +129,9 @@
   <data name="sErrGameInvalidResult" xml:space="preserve">
     <value>Game error: Invalid Result</value>
   </data>
+  <data name="sErrMissingOptionXmlFile" xml:space="preserve">
+    <value>Missing required option -i=XMLFile</value>
+  </data>
   <data name="sErrXmlGeneric" xml:space="preserve">
     <value>Xml Error: Error in Xml initialization</value>
   </data>

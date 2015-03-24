@@ -106,6 +106,15 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ERROR: {0}.
+        /// </summary>
+        internal static string sError {
+            get {
+                return ResourceManager.GetString("sError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Xml Error: Error in Xml initialization.
         /// </summary>
         internal static string sErrXmlGeneric {

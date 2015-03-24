@@ -118,48 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="sErrBotAdjacentCellShouldNotBeUndefined" xml:space="preserve">
-    <value>Bot movement error: Bot cannot move to undefined tile. This should never happen.</value>
+    <value>Σφάλμα στην κίνηση του bot: Το Bot δεν μπορεί να κινηθεί σε άγνωστα σημεία (αυτό δεν θα έπρεπε να συμβεί ποτέ).</value>
   </data>
   <data name="sErrBotCannotMoveToWallTile" xml:space="preserve">
-    <value>Bot movement error: Bot cannot move to wall tile.</value>
+    <value>Σφάλμα στην κίνηση του bot: Το Bot δεν μπορεί να κινηθεί σε τοίχους.</value>
   </data>
   <data name="sErrBotMoveCannotMoveNonAdjacentTiles" xml:space="preserve">
-    <value>Bot movement error: Bot cannot move to non-adjacent tiles.</value>
+    <value>Σφάλμα στην κίνηση του bot: Το Bot δεν μπορεί να κινηθεί σε μη διαδοχικά σημεία.</value>
   </data>
   <data name="sErrGameInvalidResult" xml:space="preserve">
-    <value>Game error: Invalid Result</value>
+    <value>Λανθασμένο αποτέλεσμα: Το αποτέλεσμα δεν είναι αποδεκτό.</value>
   </data>
   <data name="sErrMissingOptionXmlFile" xml:space="preserve">
-    <value>Missing required option -i=XMLFile</value>
+    <value>Η παράμετρος -i=XMLFile απαιτείται.</value>
   </data>
   <data name="sError" xml:space="preserve">
-    <value>ERROR: {0}</value>
+    <value>ΣΦΑΛΜΑ: {0}</value>
   </data>
   <data name="sErrXmlGeneric" xml:space="preserve">
-    <value>Xml Error: Error in Xml initialization</value>
+    <value>Σφάλμα στο Xml: Σφάλμα αρχικοποίησης του Xml.</value>
   </data>
   <data name="sErrXmlNoEndpointsFound" xml:space="preserve">
-    <value>Xml Error: No endpoints defined in Xml.</value>
+    <value>Σφάλμα στο Xml: Δεν ορίστηκαν σημεία αρχής και τέλους στο Xml.</value>
   </data>
   <data name="sErrXmlNoWallsDefined" xml:space="preserve">
-    <value>Xml Error: No walls defined in Xml.</value>
+    <value>Σφάλμα στο Xml: Δεν ορίστηκαν τείχη στο Xml.</value>
   </data>
   <data name="sGameInProgress" xml:space="preserve">
-    <value>Game in progress</value>
+    <value>Το παιχνίδι είναι σε εξέλιξη</value>
   </data>
   <data name="sGameNotStarted" xml:space="preserve">
-    <value>Game not started</value>
+    <value>Το παιχνίδι δεν άρχισε.</value>
   </data>
   <data name="sGameResult" xml:space="preserve">
-    <value>Game Result: {0}</value>
+    <value>Αποτέλεσμα του παιχνιδιού: {0}</value>
   </data>
   <data name="sGoalFound" xml:space="preserve">
-    <value>Found goal</value>
+    <value>Ο στόχος βρέθηκε.</value>
   </data>
   <data name="sGoalNotFound" xml:space="preserve">
-    <value>Could not find goal</value>
+    <value>Ο στόχος δεν βρέθηκε.</value>
   </data>
   <data name="sPoint" xml:space="preserve">
-    <value>Point: ({0},{1})</value>
+    <value>Σημείο: ({0},{1})</value>
   </data>
 </root>

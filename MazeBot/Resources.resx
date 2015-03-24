@@ -127,7 +127,7 @@
     <value>Bot movement error: Bot cannot move to non-adjacent tiles.</value>
   </data>
   <data name="sErrGameInvalidResult" xml:space="preserve">
-    <value>Game error: Invalid Result</value>
+    <value>Game error: Invalid Result.</value>
   </data>
   <data name="sErrMissingOptionXmlFile" xml:space="preserve">
     <value>Missing required option -i=XMLFile</value>
@@ -136,7 +136,7 @@
     <value>ERROR: {0}</value>
   </data>
   <data name="sErrXmlGeneric" xml:space="preserve">
-    <value>Xml Error: Error in Xml initialization</value>
+    <value>Xml Error: Error in Xml initialization.</value>
   </data>
   <data name="sErrXmlGoalPointShouldNotBeAtWall" xml:space="preserve">
     <value>Xml Error: Goal point should not be at wall.</value>
@@ -151,21 +151,33 @@
     <value>Xml Error: Starting point should not be at wall.</value>
   </data>
   <data name="sGameInProgress" xml:space="preserve">
-    <value>Game in progress</value>
+    <value>Game in progress.</value>
   </data>
   <data name="sGameNotStarted" xml:space="preserve">
-    <value>Game not started</value>
+    <value>Game not started.</value>
   </data>
   <data name="sGameResult" xml:space="preserve">
     <value>Game Result: {0}</value>
   </data>
   <data name="sGoalFound" xml:space="preserve">
-    <value>Found goal</value>
+    <value>Found goal.</value>
   </data>
   <data name="sGoalNotFound" xml:space="preserve">
-    <value>Could not find goal</value>
+    <value>Could not find goal.</value>
   </data>
   <data name="sPoint" xml:space="preserve">
     <value>Point: ({0},{1})</value>
+  </data>
+  <data name="sErrXmlGoalPointOffLimits" xml:space="preserve">
+    <value>Xml Error: Start point is off limits.</value>
+  </data>
+  <data name="sErrXmlInvalidMazeDimensions" xml:space="preserve">
+    <value>Xml Error: Invalid maze dimensions.</value>
+  </data>
+  <data name="sErrXmlStartPointOffLimits" xml:space="preserve">
+    <value>Xml Error: Start point is off limits.</value>
+  </data>
+  <data name="sErrXmlWallPointOffLimits" xml:space="preserve">
+    <value>Xml Error: Wall point ({0},{1}) is off limits.</value>
   </data>
 </root>

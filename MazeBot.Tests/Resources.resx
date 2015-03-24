@@ -213,6 +213,102 @@
 	&lt;/Game&gt;
 &lt;/MazeBot&gt;</value>
   </data>
+  <data name="sInvalidXml_GoalPointOffLimitsX" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="10" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_GoalPointOffLimitsY" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="7"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_InvalidMazeDimensionsX" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="0" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_InvalidMazeDimensionsY" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="-1"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
   <data name="sInvalidXml_StartPointAtWall" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;MazeBot&gt;
@@ -233,6 +329,102 @@
 		&lt;EndPoints&gt;
 			&lt;Start X="1" Y="3"/&gt;
 			&lt;Goal X="5" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_StartPointOffLimitsX" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="10" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_StartPointOffLimitsY" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="7"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_WallPointsOffLimitsX" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="9" Y="5"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
+  <data name="sInvalidXml_WallPointsOffLimitsY" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls&gt;
+			&lt;WallTile X="1" Y="3"/&gt;
+			&lt;WallTile X="2" Y="3"/&gt;
+			&lt;WallTile X="3" Y="3"/&gt;
+			&lt;WallTile X="4" Y="3"/&gt;
+			&lt;WallTile X="4" Y="2"/&gt;
+			&lt;WallTile X="5" Y="9"/&gt;
+			&lt;WallTile X="6" Y="5"/&gt;
+			&lt;WallTile X="7" Y="5"/&gt;
+			&lt;WallTile X="7" Y="6"/&gt;
+		&lt;/Walls&gt;
+	&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
 		&lt;/EndPoints&gt;
 	&lt;/Game&gt;
 &lt;/MazeBot&gt;</value>

@@ -63,5 +63,69 @@ namespace MazeBot.Tests
 				return Resources.sInvalidXml_GoalPointAtWall;
 			}
 		}
+
+		public static string Invalid_WallPointsOffLimitsX
+		{
+			get
+			{
+				return Resources.sInvalidXml_WallPointsOffLimitsX;
+			}
+		}
+
+		public static string Invalid_WallPointsOffLimitsY
+		{
+			get
+			{
+				return Resources.sInvalidXml_WallPointsOffLimitsY;
+			}
+		}
+
+		public static string Invalid_StartPointOffLimitsX
+		{
+			get
+			{
+				return Resources.sInvalidXml_StartPointOffLimitsX;
+			}
+		}
+
+		public static string Invalid_StartPointOffLimitsY
+		{
+			get
+			{
+				return Resources.sInvalidXml_StartPointOffLimitsY;
+			}
+		}
+
+		public static string Invalid_GoalPointOffLimitsX
+		{
+			get
+			{
+				return Resources.sInvalidXml_GoalPointOffLimitsX;
+			}
+		}
+
+		public static string Invalid_GoalPointOffLimitsY
+		{
+			get
+			{
+				return Resources.sInvalidXml_GoalPointOffLimitsY;
+			}
+		}
+
+		public static string Invalid_InvalidMazeDimensionsX
+		{
+			get
+			{
+				return Resources.sInvalidXml_InvalidMazeDimensionsX;
+			}
+		}
+
+		public static string Invalid_InvalidMazeDimensionsY
+		{
+			get
+			{
+				return Resources.sInvalidXml_InvalidMazeDimensionsY;
+			}
+		}
 	}
 }

@@ -198,6 +198,126 @@ namespace MazeBot.Tests {
         ///	&lt;/MazeDefinition&gt;
         ///	&lt;Game&gt;
         ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;10&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_GoalPointOffLimitsX {
+            get {
+                return ResourceManager.GetString("sInvalidXml_GoalPointOffLimitsX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;7&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_GoalPointOffLimitsY {
+            get {
+                return ResourceManager.GetString("sInvalidXml_GoalPointOffLimitsY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;0&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_InvalidMazeDimensionsX {
+            get {
+                return ResourceManager.GetString("sInvalidXml_InvalidMazeDimensionsX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;-1&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_InvalidMazeDimensionsY {
+            get {
+                return ResourceManager.GetString("sInvalidXml_InvalidMazeDimensionsY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
         ///			&lt;Start X=&quot;1&quot; Y=&quot;3&quot;/&gt;
         ///			&lt;Goal X=&quot;5&quot; Y=&quot;6&quot;/&gt;
         ///		&lt;/EndPoints&gt;
@@ -207,6 +327,126 @@ namespace MazeBot.Tests {
         internal static string sInvalidXml_StartPointAtWall {
             get {
                 return ResourceManager.GetString("sInvalidXml_StartPointAtWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;10&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_StartPointOffLimitsX {
+            get {
+                return ResourceManager.GetString("sInvalidXml_StartPointOffLimitsX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;7&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_StartPointOffLimitsY {
+            get {
+                return ResourceManager.GetString("sInvalidXml_StartPointOffLimitsY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;9&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_WallPointsOffLimitsX {
+            get {
+                return ResourceManager.GetString("sInvalidXml_WallPointsOffLimitsX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls&gt;
+        ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;3&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;3&quot;/&gt;
+        ///			&lt;WallTile X=&quot;4&quot; Y=&quot;2&quot;/&gt;
+        ///			&lt;WallTile X=&quot;5&quot; Y=&quot;9&quot;/&gt;
+        ///			&lt;WallTile X=&quot;6&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;5&quot;/&gt;
+        ///			&lt;WallTile X=&quot;7&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/Walls&gt;
+        ///	&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sInvalidXml_WallPointsOffLimitsY {
+            get {
+                return ResourceManager.GetString("sInvalidXml_WallPointsOffLimitsY", resourceCulture);
             }
         }
         

@@ -88,7 +88,7 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game error: Invalid Result.
+        ///   Looks up a localized string similar to Game error: Invalid Result..
         /// </summary>
         internal static string sErrGameInvalidResult {
             get {
@@ -115,11 +115,20 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xml Error: Error in Xml initialization.
+        ///   Looks up a localized string similar to Xml Error: Error in Xml initialization..
         /// </summary>
         internal static string sErrXmlGeneric {
             get {
                 return ResourceManager.GetString("sErrXmlGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xml Error: Start point is off limits..
+        /// </summary>
+        internal static string sErrXmlGoalPointOffLimits {
+            get {
+                return ResourceManager.GetString("sErrXmlGoalPointOffLimits", resourceCulture);
             }
         }
         
@@ -129,6 +138,15 @@ namespace MazeBot {
         internal static string sErrXmlGoalPointShouldNotBeAtWall {
             get {
                 return ResourceManager.GetString("sErrXmlGoalPointShouldNotBeAtWall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xml Error: Invalid maze dimensions..
+        /// </summary>
+        internal static string sErrXmlInvalidMazeDimensions {
+            get {
+                return ResourceManager.GetString("sErrXmlInvalidMazeDimensions", resourceCulture);
             }
         }
         
@@ -160,7 +178,25 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game in progress.
+        ///   Looks up a localized string similar to Xml Error: Start point is off limits..
+        /// </summary>
+        internal static string sErrXmlStartPointOffLimits {
+            get {
+                return ResourceManager.GetString("sErrXmlStartPointOffLimits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Xml Error: Wall point ({0},{1}) is off limits..
+        /// </summary>
+        internal static string sErrXmlWallPointOffLimits {
+            get {
+                return ResourceManager.GetString("sErrXmlWallPointOffLimits", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game in progress..
         /// </summary>
         internal static string sGameInProgress {
             get {
@@ -169,7 +205,7 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game not started.
+        ///   Looks up a localized string similar to Game not started..
         /// </summary>
         internal static string sGameNotStarted {
             get {
@@ -187,7 +223,7 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Found goal.
+        ///   Looks up a localized string similar to Found goal..
         /// </summary>
         internal static string sGoalFound {
             get {
@@ -196,7 +232,7 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not find goal.
+        ///   Looks up a localized string similar to Could not find goal..
         /// </summary>
         internal static string sGoalNotFound {
             get {

@@ -30,6 +30,30 @@ namespace MazeBot
 		{
 			XDocument xdoc = XDocument.Parse(xml);
 
+			// Read Maze definition
+			XElement mazeDefinition = xdoc.Descendants("MazeDefinition").First();
+			int dimX = Convert.ToInt32(mazeDefinition.Attribute("X").Value);
+			int dimY = Convert.ToInt32(mazeDefinition.Attribute("Y").Value);
+			if (dimX <= 0 || dimY <= 0)
+				throw new XmlException(Resources.sErrXmlInvalidMazeDimensions);
+
+			var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
+							select walltile;
+
+			if (walltiles.Count() == 0)
+				throw new XmlException(Resources.sErrXmlNoWallsDefined);
+			List<Point> wallTilePoints = new List<Point>();
+			foreach (var walltile in walltiles)
+			{
+				Point ptWall = new Point(Convert.ToInt32(walltile.Attribute("X").Value),
+											 Convert.ToInt32(walltile.Attribute("Y").Value));
+				if (ptWall.X > dimX || ptWall.Y > dimY || ptWall.X < 1 || ptWall.Y < 1)
+					throw new XmlException(String.Format(Resources.sErrXmlWallPointOffLimits, ptWall.X, ptWall.Y));
+
+				wallTilePoints.Add(ptWall);
+			}
+
+			// Read end points
 			var endpoints = from endpoint in xdoc.Descendants("Game").Descendants("EndPoints")
 							select new
 							{
@@ -46,30 +70,18 @@ namespace MazeBot
 					if (String.Compare(child.Name.ToString(), "Start", true) == 0)
 					{
 						StartPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
+						if (StartPosition.X > dimX || StartPosition.Y > dimY || StartPosition.X < 1 || StartPosition.Y < 1)
+							throw new XmlException(Resources.sErrXmlStartPointOffLimits);
 					}
 					else if (String.Compare(child.Name.ToString(), "Goal", true) == 0)
 					{
 						GoalPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
+						if (GoalPosition.X > dimX || GoalPosition.Y > dimY || GoalPosition.X < 1 || GoalPosition.Y < 1)
+							throw new XmlException(Resources.sErrXmlStartPointOffLimits);
 					}
 				}
 			}
 
-			// Initialize Maze
-			XElement mazeDefinition = xdoc.Descendants("MazeDefinition").First();
-			int dimX = Convert.ToInt32(mazeDefinition.Attribute("X").Value);
-			int dimY = Convert.ToInt32(mazeDefinition.Attribute("Y").Value);
-
-			var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
-							select walltile;
-
-			if (walltiles.Count() == 0)
-				throw new XmlException(Resources.sErrXmlNoWallsDefined);
-			List<Point> wallTilePoints = new List<Point>();
-			foreach(var walltile in walltiles)
-			{
-				wallTilePoints.Add(new Point(Convert.ToInt32(walltile.Attribute("X").Value),
-											 Convert.ToInt32(walltile.Attribute("Y").Value)));
-			}
 			Maze = new Maze();
 			Maze.Initialize(dimX, dimY, wallTilePoints);
 

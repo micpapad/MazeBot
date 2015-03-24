@@ -168,4 +168,16 @@
   <data name="sPoint" xml:space="preserve">
     <value>Σημείο: ({0},{1})</value>
   </data>
+  <data name="sErrXmlGoalPointOffLimits" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Ο στόχος είναι εκτός ορίων.</value>
+  </data>
+  <data name="sErrXmlInvalidMazeDimensions" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Σφάλμα στις διαστάσεις του λαβύρινθου.</value>
+  </data>
+  <data name="sErrXmlStartPointOffLimits" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Το αρχικό σημείο είναι εκτός ορίων.</value>
+  </data>
+  <data name="sErrXmlWallPointOffLimits" xml:space="preserve">
+    <value>Σφάλμα στο Xml: Το σημείο τοίχου ({0},{1}) είναι εκτός ορίων.</value>
+  </data>
 </root>

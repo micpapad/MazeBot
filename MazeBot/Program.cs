@@ -63,7 +63,18 @@ namespace MazeBot
 				return;
 			}
 
-			Play(xmlFile);
+
+			try
+			{
+				Play(xmlFile);
+			}
+			catch(Exception e)
+			{
+				Console.WriteLine("\n****************************************************************");
+				Console.WriteLine(String.Format(Resources.sError, e.Message));
+				Console.WriteLine("****************************************************************\n");
+				ShowHelp(p);
+			}
 		}
 
 		static void ShowHelp(OptionSet p)

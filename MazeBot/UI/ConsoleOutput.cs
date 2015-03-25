@@ -14,7 +14,7 @@ namespace MazeBot.UI
 		public void OutputResult(GameResult result)
 		{
 			string description = ResultDescriptions.GetResultDesription(result);
-			Console.WriteLine(String.Format(Resources.sGameResult, result));
+			Console.WriteLine(String.Format(Resources.sGameResult, description));
 		}
 
 		public void OutputStep(Point pt)

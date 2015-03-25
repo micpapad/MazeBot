@@ -26,10 +26,8 @@ namespace MazeBot
 			GoalPosition = new Point(0, 0);
 		}
 
-		public void Initialize(string xml)
+		private void DefineMazeFromXml(XDocument xdoc)
 		{
-			XDocument xdoc = XDocument.Parse(xml);
-
 			// Read Maze definition
 			XElement mazeDefinition = xdoc.Descendants("MazeDefinition").First();
 			int dimX = Convert.ToInt32(mazeDefinition.Attribute("X").Value);
@@ -64,6 +62,12 @@ namespace MazeBot
 				}
 			}
 
+			Maze = new Maze();
+			Maze.Initialize(dimX, dimY, wallTilePoints);
+		}
+
+		private void DefineGamePropertiesFromXml(XDocument xdoc)
+		{
 			// Read end points
 			var endpoints = from endpoint in xdoc.Descendants("Game").Descendants("EndPoints")
 							select new
@@ -74,37 +78,46 @@ namespace MazeBot
 			if (endpoints.Count() == 0)
 				throw new XmlException(Resources.sErrXmlNoEndpointsFound);
 
-			foreach(var endpoint in endpoints)
+			foreach (var endpoint in endpoints)
 			{
-				foreach(var child in endpoint.Children)
+				foreach (var child in endpoint.Children)
 				{
 					if (String.Compare(child.Name.ToString(), "Start", true) == 0)
 					{
 						StartPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
-						if (StartPosition.X > dimX || StartPosition.Y > dimY || StartPosition.X < 1 || StartPosition.Y < 1)
+						if (StartPosition.X > Maze.BoardDimensions.X || StartPosition.Y > Maze.BoardDimensions.Y || StartPosition.X < 1 || StartPosition.Y < 1)
 							throw new XmlException(Resources.sErrXmlStartPointOffLimits);
+						if (Maze.IsWallTile(StartPosition.X, StartPosition.Y))
+							throw new XmlException(Resources.sErrXmlStartingPointShouldNotBeAtWall);
+
 					}
 					else if (String.Compare(child.Name.ToString(), "Goal", true) == 0)
 					{
 						GoalPosition = new Point(Convert.ToInt32(child.Attribute("X").Value), Convert.ToInt32(child.Attribute("Y").Value));
-						if (GoalPosition.X > dimX || GoalPosition.Y > dimY || GoalPosition.X < 1 || GoalPosition.Y < 1)
+						if (GoalPosition.X > Maze.BoardDimensions.X || GoalPosition.Y > Maze.BoardDimensions.Y || GoalPosition.X < 1 || GoalPosition.Y < 1)
 							throw new XmlException(Resources.sErrXmlStartPointOffLimits);
+						if (Maze.IsWallTile(GoalPosition.X, GoalPosition.Y))
+							throw new XmlException(Resources.sErrXmlGoalPointShouldNotBeAtWall);
 					}
 				}
 			}
+		}
 
-			Maze = new Maze();
-			Maze.Initialize(dimX, dimY, wallTilePoints);
-
-			if (Maze.IsWallTile(StartPosition.X, StartPosition.Y))
-				throw new XmlException(Resources.sErrXmlStartingPointShouldNotBeAtWall);
-
-			if (Maze.IsWallTile(GoalPosition.X, GoalPosition.Y))
-				throw new XmlException(Resources.sErrXmlGoalPointShouldNotBeAtWall);
-
+		private void InitializeBot()
+		{
 			Bot = new Bot(this);
-			Bot.Initialize(Maze.Dimensions.X, Maze.Dimensions.Y);
+			Bot.Initialize(Maze.FullDimensionsWithOuterWalls.X, Maze.FullDimensionsWithOuterWalls.Y);
 			Bot.SetPosition(StartPosition.X, StartPosition.Y);
+		}
+
+		public void Initialize(string xml)
+		{
+			XDocument xdoc = XDocument.Parse(xml);
+
+			DefineMazeFromXml(xdoc);
+			DefineGamePropertiesFromXml(xdoc);
+
+			InitializeBot();
 		}
 
 		public void Play()

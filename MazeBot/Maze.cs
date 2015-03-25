@@ -12,11 +12,19 @@ namespace MazeBot
 		// Canvas is 0-based and is handled privately
 		private bool[,] Canvas { get; set; }
 
-		public Point Dimensions
+		public Point FullDimensionsWithOuterWalls
 		{
 			get
 			{
-				return new Point(Canvas.GetUpperBound(0), Canvas.GetUpperBound(1));
+				return new Point(Canvas.GetUpperBound(0) + 1, Canvas.GetUpperBound(1) + 1);
+			}
+		}
+
+		public Point BoardDimensions
+		{
+			get
+			{
+				return new Point(Canvas.GetUpperBound(0) - 1, Canvas.GetUpperBound(1) - 1);
 			}
 		}
 

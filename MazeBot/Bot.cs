@@ -28,7 +28,7 @@ namespace MazeBot
 
 		public void Initialize(int canvasDimX, int canvasDimY)
 		{
-			TileStatus = new TileStatus[canvasDimX + 1, canvasDimY + 1];
+			TileStatus = new TileStatus[canvasDimX, canvasDimY];
 			Path.Clear();
 		}
 

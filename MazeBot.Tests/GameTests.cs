@@ -34,8 +34,11 @@ namespace MazeBot.Tests
 			Assert.IsFalse(game.Maze.IsWallTile(8, 6));
 			Assert.IsFalse(game.Maze.IsWallTile(3, 4));
 
-			Assert.AreEqual(9, game.Maze.Dimensions.X);
-			Assert.AreEqual(7, game.Maze.Dimensions.Y);
+			Assert.AreEqual(10, game.Maze.FullDimensionsWithOuterWalls.X);
+			Assert.AreEqual(8, game.Maze.FullDimensionsWithOuterWalls.Y);
+
+			Assert.AreEqual(8, game.Maze.BoardDimensions.X);
+			Assert.AreEqual(6, game.Maze.BoardDimensions.Y);
 		}
 	}
 }

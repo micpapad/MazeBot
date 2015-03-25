@@ -454,6 +454,20 @@
 	&lt;/Game&gt;
 &lt;/MazeBot&gt;</value>
   </data>
+  <data name="sNoWallsXml" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MazeBot&gt;
+	&lt;MazeDefinition X="8" Y="6"&gt;
+		&lt;Walls nowalls="true"/&gt;
+&lt;/MazeDefinition&gt;
+	&lt;Game&gt;
+		&lt;EndPoints&gt;
+			&lt;Start X="1" Y="1"/&gt;
+			&lt;Goal X="6" Y="6"/&gt;
+		&lt;/EndPoints&gt;
+	&lt;/Game&gt;
+&lt;/MazeBot&gt;</value>
+  </data>
   <data name="sSampleXml" xml:space="preserve">
     <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;MazeBot&gt;

@@ -145,7 +145,7 @@
     <value>Σφάλμα στο Xml: Δεν ορίστηκαν σημεία αρχής και τέλους στο Xml.</value>
   </data>
   <data name="sErrXmlNoWallsDefined" xml:space="preserve">
-    <value>Σφάλμα στο Xml: Δεν ορίστηκαν τείχη στο Xml.</value>
+    <value>Σφάλμα στο Xml: Δεν ορίστηκαν τείχη στο Xml. Για να μην υπάρχουν τείχη, ορίστε το element &lt;Walls nowalls="true"/&gt;</value>
   </data>
   <data name="sErrXmlStartingPointShouldNotBeAtWall" xml:space="preserve">
     <value>Σφάλμα στο Xml: Το αρχικό σημείο δεν πρέπει να είναι σημείο τοίχου.</value>

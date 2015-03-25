@@ -160,7 +160,7 @@ namespace MazeBot {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xml Error: No walls defined in Xml..
+        ///   Looks up a localized string similar to Xml Error: No walls defined in Xml. If this is the intention, please specify &lt;Walls nowalls=&quot;true&quot;/&gt; element.
         /// </summary>
         internal static string sErrXmlNoWallsDefined {
             get {

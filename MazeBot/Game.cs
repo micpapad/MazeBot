@@ -37,20 +37,31 @@ namespace MazeBot
 			if (dimX <= 0 || dimY <= 0)
 				throw new XmlException(Resources.sErrXmlInvalidMazeDimensions);
 
-			var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
-							select walltile;
-
-			if (walltiles.Count() == 0)
+			var wallElements = mazeDefinition.Descendants("Walls");
+			if (wallElements == null || wallElements.Count() == 0)
 				throw new XmlException(Resources.sErrXmlNoWallsDefined);
-			List<Point> wallTilePoints = new List<Point>();
-			foreach (var walltile in walltiles)
-			{
-				Point ptWall = new Point(Convert.ToInt32(walltile.Attribute("X").Value),
-											 Convert.ToInt32(walltile.Attribute("Y").Value));
-				if (ptWall.X > dimX || ptWall.Y > dimY || ptWall.X < 1 || ptWall.Y < 1)
-					throw new XmlException(String.Format(Resources.sErrXmlWallPointOffLimits, ptWall.X, ptWall.Y));
 
-				wallTilePoints.Add(ptWall);
+			XElement wallElement = wallElements.First();
+
+			XAttribute noWallsAttr = wallElement.Attribute("nowalls");
+
+			List<Point> wallTilePoints = new List<Point>();
+			if (noWallsAttr == null || String.Compare(noWallsAttr.Value, "true") != 0)
+			{
+				var walltiles = from walltile in xdoc.Descendants("MazeDefinition").Descendants("Walls").Descendants("WallTile")
+								select walltile;
+
+				if (walltiles.Count() == 0)
+					throw new XmlException(Resources.sErrXmlNoWallsDefined);
+				foreach (var walltile in walltiles)
+				{
+					Point ptWall = new Point(Convert.ToInt32(walltile.Attribute("X").Value),
+												 Convert.ToInt32(walltile.Attribute("Y").Value));
+					if (ptWall.X > dimX || ptWall.Y > dimY || ptWall.X < 1 || ptWall.Y < 1)
+						throw new XmlException(String.Format(Resources.sErrXmlWallPointOffLimits, ptWall.X, ptWall.Y));
+
+					wallTilePoints.Add(ptWall);
+				}
 			}
 
 			// Read end points

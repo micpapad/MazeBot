@@ -485,6 +485,26 @@ namespace MazeBot.Tests {
         ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
         ///&lt;MazeBot&gt;
         ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
+        ///		&lt;Walls nowalls=&quot;true&quot;/&gt;
+        ///&lt;/MazeDefinition&gt;
+        ///	&lt;Game&gt;
+        ///		&lt;EndPoints&gt;
+        ///			&lt;Start X=&quot;1&quot; Y=&quot;1&quot;/&gt;
+        ///			&lt;Goal X=&quot;6&quot; Y=&quot;6&quot;/&gt;
+        ///		&lt;/EndPoints&gt;
+        ///	&lt;/Game&gt;
+        ///&lt;/MazeBot&gt;.
+        /// </summary>
+        internal static string sNoWallsXml {
+            get {
+                return ResourceManager.GetString("sNoWallsXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;MazeBot&gt;
+        ///	&lt;MazeDefinition X=&quot;8&quot; Y=&quot;6&quot;&gt;
         ///		&lt;Walls&gt;
         ///			&lt;WallTile X=&quot;1&quot; Y=&quot;3&quot;/&gt;
         ///			&lt;WallTile X=&quot;2&quot; Y=&quot;3&quot;/&gt;

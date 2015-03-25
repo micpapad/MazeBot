@@ -127,5 +127,13 @@ namespace MazeBot.Tests
 				return Resources.sInvalidXml_InvalidMazeDimensionsY;
 			}
 		}
+
+		public static string NoWallsXml
+		{
+			get
+			{
+				return Resources.sNoWallsXml;
+			}
+		}
 	}
 }

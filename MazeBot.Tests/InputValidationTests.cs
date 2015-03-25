@@ -178,5 +178,34 @@ namespace MazeBot.Tests
 			}
 		}
 
+		[TestMethod]
+		public void TestInvalidNoWalls()
+		{
+			Game game = new Game();
+			try
+			{
+				game.Initialize(MockData.ErrorEndPointsXml);
+				Assert.Fail("Xml should fail");
+			}
+			catch (XmlException ex)
+			{
+				PrivateType pt = new PrivateType("MazeBot", "MazeBot.Resources");
+				string msgExpected = pt.GetStaticProperty("sErrXmlNoEndpointsFound").ToString();
+				Assert.AreEqual(msgExpected, ex.Message);
+			}
+			try
+			{
+				game.Initialize(MockData.ErrorWallsXml);
+				Assert.Fail("Xml should fail");
+			}
+			catch (XmlException ex)
+			{
+				PrivateType pt = new PrivateType("MazeBot", "MazeBot.Resources");
+				string msgExpected = pt.GetStaticProperty("sErrXmlNoWallsDefined").ToString();
+				Assert.AreEqual(msgExpected, ex.Message);
+			}
+		}
+
+
 	}
 }

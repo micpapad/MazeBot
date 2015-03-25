@@ -138,5 +138,18 @@ namespace MazeBot.Tests
 				Assert.IsTrue(game.Bot.Position.X == 2 && game.Bot.Position.Y == 2);
 			}
 		}
+
+		[TestMethod]
+		public void TestNoWallsAutoPlay()
+		{
+			Game game = new Game();
+			game.Initialize(MockData.NoWallsXml);
+			game.Play();
+
+			Assert.AreEqual(GameResult.GoalFound, game.Result);
+			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPositionFound.X);
+			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPositionFound.Y);
+		}
+
 	}
 }

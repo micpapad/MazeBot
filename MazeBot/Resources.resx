@@ -180,4 +180,69 @@
   <data name="sErrXmlWallPointOffLimits" xml:space="preserve">
     <value>Xml Error: Wall point ({0},{1}) is off limits.</value>
   </data>
+  <data name="sErrXmlXSDValidationFailed" xml:space="preserve">
+    <value>XSD validation failed: {0}</value>
+  </data>
+  <data name="sValidationXSD" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+	&lt;xs:element name="MazeBot"&gt;
+		&lt;xs:complexType&gt;
+			&lt;xs:sequence&gt;
+				&lt;xs:element name="MazeDefinition" minOccurs="1" maxOccurs="1"&gt;
+					&lt;xs:complexType&gt;
+						&lt;xs:sequence&gt;
+							&lt;xs:element name="Walls" minOccurs="1" maxOccurs="1"&gt;
+								&lt;xs:complexType&gt;
+									&lt;xs:sequence&gt;
+										&lt;xs:element name="WallTile" minOccurs="0" maxOccurs="unbounded"&gt;
+											&lt;xs:complexType&gt;
+												&lt;xs:sequence&gt;
+												&lt;/xs:sequence&gt;
+												&lt;xs:attribute name="X" type="xs:integer" use="required"/&gt;
+												&lt;xs:attribute name="Y" type="xs:integer" use="required"/&gt;
+											&lt;/xs:complexType&gt;
+										&lt;/xs:element&gt;
+									&lt;/xs:sequence&gt;
+									&lt;xs:attribute name="nowalls" type="xs:string" use="optional"/&gt;
+								&lt;/xs:complexType&gt;
+							&lt;/xs:element&gt;
+						&lt;/xs:sequence&gt;
+						&lt;xs:attribute name="X" type="xs:integer" use="required"/&gt;
+						&lt;xs:attribute name="Y" type="xs:integer" use="required"/&gt;
+					&lt;/xs:complexType&gt;
+				&lt;/xs:element&gt;
+				&lt;xs:element name="Game" minOccurs="1" maxOccurs="1"&gt;
+					&lt;xs:complexType&gt;
+						&lt;xs:sequence&gt;
+							&lt;xs:element name="EndPoints" minOccurs="1" maxOccurs="1"&gt;
+								&lt;xs:complexType&gt;
+									&lt;xs:sequence&gt;
+										&lt;xs:element name="Start" minOccurs="1" maxOccurs="1"&gt;
+											&lt;xs:complexType&gt;
+												&lt;xs:sequence&gt;
+												&lt;/xs:sequence&gt;
+												&lt;xs:attribute name="X" type="xs:integer" use="required"/&gt;
+												&lt;xs:attribute name="Y" type="xs:integer" use="required"/&gt;
+											&lt;/xs:complexType&gt;
+										&lt;/xs:element&gt;
+										&lt;xs:element name="Goal" minOccurs="1" maxOccurs="1"&gt;
+											&lt;xs:complexType&gt;
+												&lt;xs:sequence&gt;
+												&lt;/xs:sequence&gt;
+												&lt;xs:attribute name="X" type="xs:integer" use="required"/&gt;
+												&lt;xs:attribute name="Y" type="xs:integer" use="required"/&gt;
+											&lt;/xs:complexType&gt;
+										&lt;/xs:element&gt;
+									&lt;/xs:sequence&gt;
+								&lt;/xs:complexType&gt;
+							&lt;/xs:element&gt;
+						&lt;/xs:sequence&gt;
+					&lt;/xs:complexType&gt;
+				&lt;/xs:element&gt;
+			&lt;/xs:sequence&gt;
+		&lt;/xs:complexType&gt;
+	&lt;/xs:element&gt;
+&lt;/xs:schema&gt;</value>
+  </data>
 </root>

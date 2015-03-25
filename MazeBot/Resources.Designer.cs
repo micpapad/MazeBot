@@ -196,6 +196,15 @@ namespace MazeBot {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to XSD validation failed: {0}.
+        /// </summary>
+        internal static string sErrXmlXSDValidationFailed {
+            get {
+                return ResourceManager.GetString("sErrXmlXSDValidationFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Game in progress..
         /// </summary>
         internal static string sGameInProgress {
@@ -246,6 +255,28 @@ namespace MazeBot {
         internal static string sPoint {
             get {
                 return ResourceManager.GetString("sPoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+        ///&lt;xs:schema xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+        ///	&lt;xs:element name=&quot;MazeBot&quot;&gt;
+        ///		&lt;xs:complexType&gt;
+        ///			&lt;xs:sequence&gt;
+        ///				&lt;xs:element name=&quot;MazeDefinition&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;
+        ///					&lt;xs:complexType&gt;
+        ///						&lt;xs:sequence&gt;
+        ///							&lt;xs:element name=&quot;Walls&quot; minOccurs=&quot;1&quot; maxOccurs=&quot;1&quot;&gt;
+        ///								&lt;xs:complexType&gt;
+        ///									&lt;xs:sequence&gt;
+        ///										&lt;xs:element name=&quot;WallTile&quot; minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;
+        ///											&lt;xs:complexType&gt;
+        ///												&lt;xs:se [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string sValidationXSD {
+            get {
+                return ResourceManager.GetString("sValidationXSD", resourceCulture);
             }
         }
     }

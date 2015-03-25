@@ -180,4 +180,7 @@
   <data name="sErrXmlWallPointOffLimits" xml:space="preserve">
     <value>Σφάλμα στο Xml: Το σημείο τοίχου ({0},{1}) είναι εκτός ορίων.</value>
   </data>
+  <data name="sErrXmlXSDValidationFailed" xml:space="preserve">
+    <value>Η επιβεβαίωση με το XSD απέτυχε: {0}</value>
+  </data>
 </root>

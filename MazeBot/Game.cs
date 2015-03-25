@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Xml.Schema;
 using MazeBot.Exceptions;
 using MazeBot.UI;
 using MazeBot.Utils;
@@ -24,6 +26,16 @@ namespace MazeBot
 			Result = GameResult.GameNotStarted;
 			StartPosition = new Point(0, 0);
 			GoalPosition = new Point(0, 0);
+		}
+
+		public void ValidateXml(XDocument xdoc, string xsd)
+		{
+			XmlSchemaSet schemas = new XmlSchemaSet();
+			schemas.Add("", System.Xml.XmlReader.Create(new StringReader(xsd)));
+			xdoc.Validate(schemas, (o, e) =>
+				{
+					throw new XmlException(String.Format(Resources.sErrXmlXSDValidationFailed, e.Message));
+				});
 		}
 
 		private void DefineMazeFromXml(XDocument xdoc)
@@ -113,6 +125,8 @@ namespace MazeBot
 		public void Initialize(string xml)
 		{
 			XDocument xdoc = XDocument.Parse(xml);
+
+			ValidateXml(xdoc, Resources.sValidationXSD);
 
 			DefineMazeFromXml(xdoc);
 			DefineGamePropertiesFromXml(xdoc);

@@ -135,5 +135,13 @@ namespace MazeBot.Tests
 				return Resources.sNoWallsXml;
 			}
 		}
+
+		public static string UnreachableRandomTileXml
+		{
+			get
+			{
+				return Resources.sUnreachableRandomTileXml;
+			}
+		}
 	}
 }

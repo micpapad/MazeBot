@@ -151,5 +151,18 @@ namespace MazeBot.Tests
 			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPositionFound.Y);
 		}
 
+		[TestMethod]
+		public void TestUnreachableRandomTile()
+		{
+			Game game = new Game();
+			game.Initialize(MockData.UnreachableRandomTileXml);
+			game.Play();
+
+			Assert.AreEqual(GameResult.GoalFound, game.Result);
+			Assert.AreEqual(game.GoalPosition.X, game.Bot.GoalPositionFound.X);
+			Assert.AreEqual(game.GoalPosition.Y, game.Bot.GoalPositionFound.Y);
+		}
+
+
 	}
 }

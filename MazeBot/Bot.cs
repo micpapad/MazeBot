@@ -119,11 +119,11 @@ namespace MazeBot
 						status = MoveTo(x, y);
 					else
 						status = TileStatus[x, y];
-					if (status == MazeBot.TileStatus.Goal || status == MazeBot.TileStatus.Undefined)
+					if (status == MazeBot.TileStatus.Goal)
 						return status;
 				}
 			}
-			return status;
+			return MazeBot.TileStatus.Undefined;
 		}
 
 		public void OutputPath(IOutput output)

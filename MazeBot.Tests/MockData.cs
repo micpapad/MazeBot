@@ -143,5 +143,21 @@ namespace MazeBot.Tests
 				return Resources.sUnreachableRandomTileXml;
 			}
 		}
+
+		public static string SampleClosedStart
+		{
+			get
+			{
+				return Resources.sSampleClosedStart;
+			}
+		}
+
+		public static string BlockedStartPoint
+		{
+			get
+			{
+				return Resources.sBlockedStartPoint;
+			}
+		}
 	}
 }

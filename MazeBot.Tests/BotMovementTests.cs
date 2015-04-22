@@ -42,6 +42,26 @@ namespace MazeBot.Tests
 		}
 
 		[TestMethod]
+		public void TestSampleClosedStart()
+		{
+			Game game = new Game();
+			game.Initialize(MockData.SampleClosedStart);
+			game.Play();
+
+			Assert.AreEqual(GameResult.GoalNotFound, game.Result);
+		}
+
+		[TestMethod]
+		public void TestBlockedStartPoint()
+		{
+			Game game = new Game();
+			game.Initialize(MockData.BlockedStartPoint);
+			game.Play();
+
+			Assert.AreEqual(GameResult.GoalNotFound, game.Result);
+		}
+
+		[TestMethod]
 		public void TestDirectNoSolutionFound()
 		{
 			Game game = new Game();
